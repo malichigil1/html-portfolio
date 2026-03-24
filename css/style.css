@@ -25,6 +25,8 @@
 .profile-img {
   width: 400px;
   height: 400px;
+  max-width: 80vw;
+  max-height: 80vw;
   border-radius: 50%;
   object-fit: cover;
 }
