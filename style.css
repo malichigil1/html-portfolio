@@ -1,0 +1,266 @@
+/* ── Hero Section ── */
+#title {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Split background */
+.title-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.title-bg-left {
+  flex: 1;
+  background-color: #fddeee;
+}
+
+.title-bg-right {
+  flex: 1;
+  background-color: #ffffff;
+}
+
+/* Text sits above the background */
+.title-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.title-label {
+  font-family: 'Cinzel', serif;
+  /* font-size: 0.85rem; */
+  letter-spacing: 0.2em;
+  color: #e8b8d0;
+  margin-bottom: 0.5rem;
+}
+
+.title-name {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.title-sub {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #333333;
+}
+
+
+.title-sub-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* base style */
+.title-sub {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* LEFT SIDE (dark) */
+.title-sub-dark {
+  color: #333333;
+  clip-path: inset(0 50% 0 0); /* show left half */
+}
+
+/* RIGHT SIDE (blue like I AM) */
+.title-sub-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #e8b8d0;
+  clip-path: inset(0 0 0 50%); /* show right half */
+}
+
+/* ── About Section ── */
+#about {
+  background-color: #fff;
+}
+
+.about-inner {
+  display: flex;
+  align-items: stretch;
+  min-height: 50vh;
+}
+
+/* Left: image fills its column edge-to-edge */
+.about-image-col {
+  flex: 0 0 32%;
+  overflow: hidden;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Right: text column */
+.about-text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 5rem;
+  background-color: #fddeee22; /* very faint pink, matches hero left */
+}
+
+.about-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #e8b8d0;
+  margin-bottom: 0.5rem;
+}
+
+.about-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.about-body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.about-personal {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #888;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .about-inner {
+    flex-direction: column;
+  }
+
+  .about-image-col {
+    flex: 0 0 50vw;
+    height: 50vw;
+  }
+
+  .about-text-col {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* ── Dividers ── */
+.featurette-divider {
+  border-color: #e8b8d0;
+  opacity: 1;
+}
+
+/* ── Contact Section ── */
+#contact {
+  background-color: #ffffff;
+}
+
+.contact-inner {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+}
+
+.contact-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #e8b8d0;
+  margin-bottom: 0.5rem;
+}
+
+.contact-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.contact-body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #1a1a1a;
+  border: 1.5px solid #1a1a1a;
+  padding: 0.6rem 1.8rem;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.contact-btn:hover {
+  background-color: #1a1a1a;
+  color: #e8b8d0;
+}
+
+/* ── Footer ── */
+.contact-footer {
+  border-top: 1px solid #e8b8d0;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin-bottom: 0.75rem;
+}
+
+.footer-nav a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #1a1a1a;
+}
+
+.footer-copy {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}
